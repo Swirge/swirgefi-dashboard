@@ -14,10 +14,10 @@ export default function NavBar() {
 		<Nav>
 			<NavSection>
 				<NavLogo src='/img/beefy.svg' />
-        <NavName href='https://dashboard.beefy.finance'>dashboard</NavName>
+        <NavName href='https://dashboard.swirge.com'>Swirge | Finance Dashboard</NavName>
 			</NavSection>
 			<NavSection>
-				<NavBtn href='https://app.beefy.finance' target="_blank" rel="noreferrer">{t("LaunchApp")}</NavBtn>
+				<NavBtn href='https://finance.swirge.com' target="_blank" rel="noreferrer">{t("LaunchApp")}</NavBtn>
 			</NavSection>
 		</Nav>
 	);

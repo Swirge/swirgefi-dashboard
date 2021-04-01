@@ -3,8 +3,8 @@ import { apiCacheTime } from "./apiCacheTime";
 
 const endpoints = {
   coingecko: "https://api.coingecko.com/api/v3/simple/price",
-  tokens: "https://api.beefy.finance/prices",
-  lps: "https://api.beefy.finance/lps",
+  tokens: "https://api.swirge.com/prices",
+  lps: "https://api.swirge.com/lps",
 };
 
 const CACHE_TIMEOUT = 5 * 60 * 1000;
@@ -39,7 +39,7 @@ const fetchCoingecko = async id => {
 
 const fetchTokens = async id => {
   try {
-    const response = await axios.get(`https://api.beefy.finance/prices?_=${apiCacheTime()}`);
+    const response = await axios.get(`https://api.swirge.com/prices?_=${apiCacheTime()}`);
     return response.data[id];
   } catch (err) {
     console.error(err);
@@ -49,7 +49,7 @@ const fetchTokens = async id => {
 
 const fetchLP = async (id) => {
   try {
-    const response = await axios.get(`https://api.beefy.finance/lps?_=${apiCacheTime()}`);
+    const response = await axios.get(`https://api.swirge.com/lps?_=${apiCacheTime()}`);
     return response.data[id];
   } catch (err) {
     console.error(err);

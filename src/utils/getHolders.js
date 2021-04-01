@@ -3,7 +3,7 @@ import { apiCacheTime } from "./apiCacheTime";
 
 const getHolders = async () => {
   try {
-    const response = await axios.get(`https://api.beefy.finance/holders?_=${apiCacheTime()}`);
+    const response = await axios.get(`https://api.swirge.com/holders?_=${apiCacheTime()}`);
     return response.data["holderCount"];
   } catch (err) {
     console.error(err);

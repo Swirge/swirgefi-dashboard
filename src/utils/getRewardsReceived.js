@@ -5,7 +5,7 @@ const { getTopicFromSignature, getTopicFromAddress, getValueFromData } = require
 
 const web3 = new Web3('https://bsc-dataseed.binance.org/');
 
-const rewardPool = '0x453D4Ba9a2D594314DF88564248497F7D74d6b2C';
+const rewardPool = '0xAed559D484A4F40896196e02bD378E8eE1E4d0Ae';
 const wbnb = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c';
 const rewardPoolCreationBlock = '1170074';
 
