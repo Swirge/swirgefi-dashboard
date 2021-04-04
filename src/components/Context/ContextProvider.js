@@ -15,6 +15,7 @@ import { getVaults } from "../../utils/getVaults";
 export const VaultsContext = createContext(null);
 
 const fetchVaultTvl = async ({ vault, signer }) => {
+
   try {
     const vaultContract = new ethers.Contract(vault.earnedTokenAddress, BeefyVault, signer);
     const vaultBalance = await vaultContract.balance();

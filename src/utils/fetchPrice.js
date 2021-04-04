@@ -18,6 +18,7 @@ function isCached({ oracle, id }) {
 }
 
 function getCachedPrice({ oracle, id }) {
+  console.log(oracle, id)
   return cache[`${oracle}-${id}`].price;
 }
 
@@ -30,6 +31,8 @@ const fetchCoingecko = async id => {
     const response = await axios.get(endpoints.coingecko, {
       params: { ids: id, vs_currencies: "usd" },
     });
+    console.log(id)
+
     return response.data[id].usd;
   } catch (err) {
     console.error(err);
@@ -38,8 +41,11 @@ const fetchCoingecko = async id => {
 };
 
 const fetchTokens = async id => {
+  // eslint-disable-next-line no-self-assign
+  id === 'BIFI' ? id = 'SWGb' : id=id
   try {
     const response = await axios.get(`https://api.swirge.com/prices?_=${apiCacheTime()}`);
+    // console.log(id)
     return response.data[id];
   } catch (err) {
     console.error(err);
@@ -50,6 +56,8 @@ const fetchTokens = async id => {
 const fetchLP = async (id) => {
   try {
     const response = await axios.get(`https://api.swirge.com/lps?_=${apiCacheTime()}`);
+    console.log(id)
+
     return response.data[id];
   } catch (err) {
     console.error(err);
